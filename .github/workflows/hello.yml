@@ -1,8 +1,9 @@
-name: Hello world!
+name: Hello World!
 
 on:
   push:
-    branches: -main
+    branches:
+      - main
 
 jobs:
   hello_world_job:
@@ -10,4 +11,4 @@ jobs:
     steps:
       - name: Say hello
         run: |
-          echo "Hello world!"
+          echo "Hello World!"
