@@ -12,6 +12,7 @@ describe("Pokedex", function () {
     cy.contains("chlorophyll");
   });
   it("Health check passes", function () {
+    cy.visit("http://localhost:5000/health");
     cy.contains("ok");
   });
 });
