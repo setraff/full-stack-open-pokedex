@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 
-// get the port from environment variable
+// get the port from environment variable Helo what the fuck bro
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static("dist"));
 
 app.get("/health", (req, res) => {
-  res.send("ok bruh");
+  res.send("HEALTH OK");
 });
 
 app.listen(PORT, () => {
