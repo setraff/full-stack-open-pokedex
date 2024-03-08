@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// get the port from environment variable
+// get the port from environment variable Helo
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static("dist"));
