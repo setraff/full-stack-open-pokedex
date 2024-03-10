@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: context
         env:
-          COMMIT_MESSAGE: ${{ contains(join(github.event.commits.*.message), '#skip')}}
+          COMMIT_MESSAGE: ${{ contains(join(github.event.commits.*.message), '#skip')}} # does commit message contain #skip?
         run: echo "$COMMIT_MESSAGE"
