@@ -54,10 +54,10 @@ jobs:
         with:
           severity: info
           details: Test succeeded
-          wekhookUrl: ${{ secrets.FULLSTACK_WEBHOOK }}
+          webhookUrl: ${{ secrets.FULLSTACK_WEBHOOK }}
       - uses: rjstone/discord-webhook-notify@v1
         if: failure()
         with:
           severity: error
           details: Deployment failed
-          wekhookUrl: ${{ secrets.FULLSTACK_WEBHOOK }}
+          webhookUrl: ${{ secrets.FULLSTACK_WEBHOOK }}
