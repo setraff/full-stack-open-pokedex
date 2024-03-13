@@ -1,13 +1,18 @@
-# name: Health check
+name: Health check
 
 # on:
 #   schedule:
 #     - cron: "*/5 * * * *"
 
-# jobs:
-#   health_check:
-#     runs-on: ubuntu-20.04
-#     steps:
-#       - uses: jtalk/url-health-check-action@v4
-#         with:
-#           url: https://full-stack-open-pokedex-22xa.onrender.com/ping #fail!
+on:
+  push:
+    branches:
+      - main #please work
+
+jobs:
+  health_check:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: jtalk/url-health-check-action@v4
+        with:
+          url: https://full-stack-open-pokedex-22xa.onrender.com/ping #fail!
