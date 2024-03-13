@@ -2,8 +2,7 @@ name: Health check
 
 on:
   schedule:
-    - cron: "* * * * *" # why isnt this working
-
+    - cron: "0.5 * * * *"
 jobs:
   health_check:
     runs-on: ubuntu-20.04
