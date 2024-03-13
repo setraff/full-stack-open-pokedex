@@ -1,8 +1,13 @@
 name: Health check
 
+# on:
+#   schedule:
+#     - cron: "* * * * *"
+
 on:
-  schedule:
-    - cron: "* * * * *" # why isnt this working
+  push:
+    branches:
+      - main
 
 jobs:
   health_check:
