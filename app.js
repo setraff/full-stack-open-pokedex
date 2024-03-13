@@ -6,9 +6,12 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.static("dist"));
 
-app.get("/health", (req, res) => {
-  // res.send("HEALTH OK");
+app.get("/ping", (req, res) => {
   res.sendStatus(500);
+});
+
+app.get("/health", (req, res) => {
+  res.send("HEALTH OK");
 });
 
 app.listen(PORT, () => {
